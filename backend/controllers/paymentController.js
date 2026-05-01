@@ -30,7 +30,7 @@ const createOrder = async (req, res, next) => {
       });
     }
 
-    const amount = 99900; 
+    const amount = 49900; 
     const receipt = `rcpt_${req.user._id}_${Date.now()}`;
 
     const order = await razorpayInstance.orders.create({
@@ -98,7 +98,7 @@ const verifyPayment = async (req, res, next) => {
     await User.findByIdAndUpdate(req.user._id, {
       isPremium: true,
       planType: 'premium',
-      aiLimit: 999999,
+      aiLimit: 9999,
       premiumActivatedAt: new Date()
     });
 

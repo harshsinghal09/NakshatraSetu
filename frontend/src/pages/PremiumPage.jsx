@@ -36,7 +36,7 @@ export default function PremiumPage() {
         amount: order.amount,
         currency: order.currency,
         name: 'NakshatraSetu',
-        description: 'Premium Lifetime Access',
+        description: 'Premium Monthly Access',
         order_id: order.id,
         handler: async (response) => {
           try {
@@ -115,7 +115,7 @@ export default function PremiumPage() {
             Stars ke Raaz Unlock Karein
           </h1>
           <p style={{ color:'var(--text-secondary)', maxWidth:480, margin:'0 auto', lineHeight:1.8 }}>
-            Ek baar ki investment — lifetime premium access. Unlimited AI, deep reports, aur zyada.
+            Investment — For monthly premium access. Unlimited AI, deep reports, aur zyada.
           </p>
         </div>
 
@@ -155,9 +155,9 @@ export default function PremiumPage() {
             </div>
             <div style={{ marginBottom:8 }}>
               <span style={{ fontFamily:'var(--font-display)', fontSize:'2.2rem', color:'var(--gold-bright)' }}>₹499</span>
-              <span style={{ color:'var(--text-muted)', fontSize:'0.85rem' }}> /lifetime</span>
+              <span style={{ color:'var(--text-muted)', fontSize:'0.85rem' }}> /month</span>
             </div>
-            <p style={{ color:'var(--text-muted)', fontSize:'0.8rem', marginBottom:24 }}>Ek baar pay karein, hamesha access paayein</p>
+            <p style={{ color:'var(--text-muted)', fontSize:'0.8rem', marginBottom:24 }}>Har mahine ₹499 pay karein aur premium features ka access paayein</p>
             <ul style={{ listStyle:'none', display:'flex', flexDirection:'column', gap:12, marginBottom:32 }}>
               {FEATURES_PREMIUM.map((f, i) => (
                 <li key={i} style={{ display:'flex', alignItems:'flex-start', gap:10, color:'var(--text-secondary)', fontSize:'0.875rem' }}>
@@ -206,7 +206,7 @@ function FAQItem({ q, a }) {
 }
 
 const FAQ = [
-  { q:'Kya yeh one-time payment hai?', a:'Haan! ₹499 ek baar pay karein aur lifetime access paayein. Koi recurring charges nahi hain.' },
+  { q:'Kya yeh one-time payment hai?', a:'Haan! har mahine ₹499 pay karein aur unlimited access paayein.. Yeh monthly plan hai — har mahine ₹499 ka payment kare, unlimited access ka laabh uthaye.' },
   { q:'AI predictions kaise karta hai?', a:'AI predictions nahi karta. Swiss Ephemeris se exact planetary positions calculate hoti hain, Vedic rules se insights generate hote hain, aur AI sirf unhe Hinglish mein explain karta hai.' },
   { q:'Agar payment fail ho jaaye?', a:'Agar payment deduct ho gayi aur account premium na ho, toh 24 hours mein automatically reflect hoga ya support@nakshatra-setu.com pe contact karein.' },
   { q:'Kundali data safe hai?', a:'Haan. Aapka data MongoDB pe securely stored hai. JWT authentication se aapka account protected hai. Hum data kisi se share nahi karte.' },
