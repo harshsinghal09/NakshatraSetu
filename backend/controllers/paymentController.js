@@ -10,12 +10,12 @@ let Razorpay;
 let razorpayInstance;
 try {
   Razorpay = require('razorpay');
-  if (process.env.RAZORPAY_KEY_ID && process.env.RAZORPAY_KEY_ID !== 'rzp_test_your_key_id') {
-    razorpayInstance = new Razorpay({
-      key_id: process.env.RAZORPAY_KEY_ID,
-      key_secret: process.env.RAZORPAY_KEY_SECRET
-    });
-  }
+if (process.env.RAZORPAY_KEY_ID && process.env.RAZORPAY_KEY_SECRET) {
+  razorpayInstance = new Razorpay({
+    key_id: process.env.RAZORPAY_KEY_ID,
+    key_secret: process.env.RAZORPAY_KEY_SECRET
+  });
+}
 } catch (e) {
   console.log('Razorpay not configured - payment features disabled');
 }
@@ -122,3 +122,5 @@ const getPaymentHistory = async (req, res, next) => {
 };
 
 module.exports = { createOrder, verifyPayment, getPaymentHistory };
+
+
