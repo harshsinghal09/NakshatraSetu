@@ -4,8 +4,7 @@
 
 const axios = require('axios');
 
-const GEMINI_API_URL =
-  'https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent';
+const GEMINI_API_URL ='https://generativelanguage.googleapis.com/v1/models/gemini-1.5-pro:generateContent';
 // Structured insights ko Gemini prompt mein convert karo
 function buildKundaliPrompt(insights, lagnaInfo, mahadasha, userName) {
   const careerInsights = insights.career.map(i => `- ${i.rule}: ${i.effect}\n  Based on: ${i.based_on}\n  Reason: ${i.reason}`).join('\n');
